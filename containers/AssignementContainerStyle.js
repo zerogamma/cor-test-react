@@ -12,11 +12,15 @@ export const AContainer = styled.div`
   background-color: #fff;
   padding-left: 20px;
   border-left: 1px solid;
-  height: 100%
+  height: 100%;
+  padding-top: 30px;
+  transform: translateX(${props => (props.visible ? "0%" : "100%")});
+  transition: transform ease-out 0.3s;
 `;
 
 export const AHButton = styled.input`
   position: absolute;
   top: 15px;
   right: 15px;
+  z-index: 900;
 `;
