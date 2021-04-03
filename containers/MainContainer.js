@@ -1,7 +1,7 @@
 import React from "react";
 import AssignementContainer from "./AssignementContainer";
 import ResolutionContainer from "./ResolutionContainer";
-import { MCMain } from "./MainContainer";
+import { MCMain } from "./MainContainerStyle";
 
 const MainContainer = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../components/Heading";
-import { ACMain, AHButton, AContainer } from "./AssignementContainer";
+import { ACMain, AHButton, AContainer } from "./AssignementContainerStyle";
 
 const AssignementContainer = () => {
   return (
