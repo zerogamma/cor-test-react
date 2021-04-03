@@ -1,4 +1,4 @@
-import { FETCH_DATA } from "../actionTypes";
+import { FETCH_DATA, SELECT_MATRIX } from "../actionTypes";
 import { getResources } from "../../service";
 
 const initialState = {
@@ -17,6 +17,12 @@ export default function(state = initialState, action) {
         ...state,
         matrixs: fetched,
         countMatrix: fetched.length
+      };
+    }
+    case SELECT_MATRIX: {
+      return {
+        ...state,
+        selectedMatrix: matrix.lenght !== 0 ? matrixs[action.payload] : []
       };
     }
     default:
