@@ -1,13 +1,15 @@
 import React from "react";
-import Heading from "../components/Heading";
+import Selector from "../components/MatrixSelector";
+import Matrix from "../components/Matrix";
 import { RCMain } from "./ResolutionContainerStyle";
 
-const AssignementContainer = () => {
+const ResolutionContainer = () => {
   return (
-    <div>
-      <Heading />
-    </div>
+    <RCMain>
+      <Selector />
+      <Matrix />
+    </RCMain>
   );
 };
 
-export default AssignementContainer;
+export default ResolutionContainer;

@@ -7,5 +7,5 @@ export const fetch_data = () => ({
 
 export const select_matrix = selected => ({
   type: SELECT_MATRIX,
-  payload: { selected }
+  payload: selected
 });

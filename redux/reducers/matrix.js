@@ -10,19 +10,20 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case FETCH_DATA: {
-      let fetched = [];
-      getResources().then(value => (fetched = value.resources));
-
+      const fetched = getResources();
       return {
         ...state,
-        matrixs: fetched,
-        countMatrix: fetched.length
+        matrixs: fetched.resources,
+        countMatrix: fetched.resources.length,
+        selectedMatrix:
+          fetched.resources.lenght !== 0 ? fetched.resources[0] : []
       };
     }
     case SELECT_MATRIX: {
       return {
         ...state,
-        selectedMatrix: matrix.lenght !== 0 ? matrixs[action.payload] : []
+        selectedMatrix:
+          state.matrixs.lenght !== 0 ? state.matrixs[action.payload] : []
       };
     }
     default:
