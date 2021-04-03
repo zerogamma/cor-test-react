@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "./components/Heading";
-import { cMain } from "./ResolutionContainer";
+import Heading from "../components/Heading";
+import { RCMain } from "./ResolutionContainer";
 
 const AssignementContainer = () => {
   return (

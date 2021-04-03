@@ -1,14 +1,14 @@
 import React from "react";
 import AssignementContainer from "./AssignementContainer";
 import ResolutionContainer from "./ResolutionContainer";
-import { cMain } from "./MainContainer";
+import { MCMain } from "./MainContainer";
 
 const MainContainer = () => {
   return (
-    <cMain>
+    <MCMain>
       <AssignementContainer />
       <ResolutionContainer />
-    </cMain>
+    </MCMain>
   );
 };
 

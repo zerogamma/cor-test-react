@@ -1,15 +1,15 @@
 import React from "react";
 import Heading from "../components/Heading";
-import { cMain, hButton, aContainer } from "./AssignementContainer";
+import { ACMain, AHButton, AContainer } from "./AssignementContainer";
 
 const AssignementContainer = () => {
   return (
-    <cMain>
-      <hButton type="button" />
-      <aContainer>
+    <ACMain>
+      <AHButton type="button" />
+      <AContainer>
         <Heading />
-      </aContainer>
-    </cMain>
+      </AContainer>
+    </ACMain>
   );
 };
 

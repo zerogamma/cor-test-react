@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const cMain = styled.div`
+export const MCMain = styled.div`
   display: flex;
 `;

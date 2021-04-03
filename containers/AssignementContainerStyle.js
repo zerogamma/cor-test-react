@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const cMain = styled.div``;
+export const ACMain = styled.div`
+  position: 5;
+`;
 
-export const aContainer = styled.div``;
+export const AContainer = styled.div``;
 
-export const hButton = styled.input`
+export const AHButton = styled.input`
   position: absolute;
 `;
