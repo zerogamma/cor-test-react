@@ -1,5 +1,5 @@
 import { FIND_WORD } from "../actionTypes";
-import { checkSide } from "../helper";
+import { checkWord, checkRandomWord } from "../helper";
 
 const initialState = {
   finded_word: 0,
@@ -37,7 +37,7 @@ const findWord = (matrix, word) => {
       if (column !== word[0]) return (result += 0);
       let countFind = 0;
       directions.forEach(direction => {
-        if (checkSide(matrix, x, y, direction, word)) countFind += 1;
+        if (checkWord(matrix, x, y, direction, word)) countFind += 1;
       });
       return (result += countFind);
     }, 0));
