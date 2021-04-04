@@ -1,11 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import {} from "./style";
+import { RContainer, RLabel } from "./style";
 
 const Result = () => {
   const toFind = useSelector(state => state.finder.finded_word);
-  console.log(toFind);
-  return <div />;
+  return (
+    <RContainer>
+      <RLabel>
+        There are {toFind} "OIE" word combination in this Alphabet Soup try to
+        find them!
+      </RLabel>
+    </RContainer>
+  );
 };
 
 export default Result;
