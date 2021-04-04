@@ -17,8 +17,8 @@ export const MRowContainer = styled.div`
 
 export const MBox = styled.div`
   border: 1px solid;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 5px;
   display: flex;
   justify-content: center;

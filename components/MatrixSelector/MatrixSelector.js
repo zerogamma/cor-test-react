@@ -16,7 +16,7 @@ const MatrixSelector = () => {
 
   return (
     <MSContainer>
-      <MSTitle>Select Alphabet Soup</MSTitle>
+      <MSTitle>Select Alphabet Soup Set</MSTitle>
       <Dropdown value={selectedMatrix} onChange={changeValue}>
         {_.times(countMatrix, i => {
           return (
