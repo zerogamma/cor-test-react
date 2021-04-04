@@ -18,8 +18,7 @@ export const Dropdown = styled.select`
   border: none;
   border-bottom: 1px solid;
   outline: none;
-  padding-left: 5px;
-  font-family: "Poppins", sans-serif;
+  padding-left: 5px;font-family: 'Inconsolata', monospace;
 `;
 
 export const DropdownContent = styled.option``;
