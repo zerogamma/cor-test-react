@@ -9,4 +9,7 @@ export const HContainer = styled.div`
   margin-bottom: 35px;
 `;
 
-export const HTitle = styled.div``;
+export const HTitle = styled.div`
+  font-size: 25px;
+  padding-left: 20px;
+`;

@@ -20,7 +20,9 @@ export const AContainer = styled.div`
 
 export const AHButton = styled.input`
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 28px;
+  right: 25px;
   z-index: 900;
+  border: none;
+  color: darkgray;
 `;

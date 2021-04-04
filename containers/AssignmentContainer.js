@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Heading from "../components/Heading";
-import { ACMain, AHButton, AContainer } from "./AssignementContainerStyle";
+import { ACMain, AHButton, AContainer } from "./AssignmentContainerStyle";
 
-const AssignementContainer = () => {
+const AssignmentContainer = () => {
   const [visibility, setvisibility] = useState(false);
 
   return (
@@ -19,4 +19,4 @@ const AssignementContainer = () => {
   );
 };
 
-export default AssignementContainer;
+export default AssignmentContainer;

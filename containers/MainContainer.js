@@ -1,5 +1,5 @@
 import React from "react";
-import AssignementContainer from "./AssignementContainer";
+import AssignmentContainer from "./AssignmentContainer";
 import ResolutionContainer from "./ResolutionContainer";
 import Header from "../components/Header";
 
@@ -10,7 +10,7 @@ const MainContainer = () => {
     <>
       <Header />
       <MCMain>
-        <AssignementContainer />
+        <AssignmentContainer />
         <ResolutionContainer />
       </MCMain>
     </>
