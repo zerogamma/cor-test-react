@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { DropdownContent, Dropdown } from "./style";
 import { select_matrix } from "../../redux/action";
 import _ from "lodash";
+import { DropdownContent, Dropdown, MSContainer } from "./style";
 
 const MatrixSelector = () => {
   const countMatrix = useSelector(state => state.matrix.countMatrix);
@@ -15,11 +15,13 @@ const MatrixSelector = () => {
   };
 
   return (
-    <Dropdown value={selectedMatrix} onChange={changeValue}>
-      {_.times(countMatrix, i => {
-        return <DropdownContent key={i}>{i}</DropdownContent>;
-      })}
-    </Dropdown>
+    <MSContainer>
+      <Dropdown value={selectedMatrix} onChange={changeValue}>
+        {_.times(countMatrix, i => {
+          return <DropdownContent key={i}>{i}</DropdownContent>;
+        })}
+      </Dropdown>
+    </MSContainer>
   );
 };
 
