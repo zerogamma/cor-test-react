@@ -15,7 +15,7 @@ export const AContainer = styled.div`
   height: 100%;
   padding-top: 30px;
   transform: translateX(${props => (props.visible ? "0%" : "100%")});
-  transition: transform ease-out 0.3s;
+  transition: transform ease-out 0.5s;
 `;
 
 export const AHButton = styled.input`
