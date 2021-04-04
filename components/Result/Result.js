@@ -4,7 +4,7 @@ import {} from "./style";
 
 const Result = () => {
   const toFind = useSelector(state => state.finder.finded_word);
-  //console.log(toFind);
+  console.log(toFind);
   return <div />;
 };
 
