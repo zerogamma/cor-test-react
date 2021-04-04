@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { find_word } from "../../redux/action";
 import { MContainer, MBox, MRowContainer, MMatrixContaner } from "./style";
@@ -6,7 +6,10 @@ import { MContainer, MBox, MRowContainer, MMatrixContaner } from "./style";
 const Matrix = () => {
   const matrix = useSelector(state => state.matrix.selectedMatrix);
   const dispatch = useDispatch();
-  dispatch(find_word(matrix));
+
+  useEffect(() => {
+    dispatch(find_word(matrix));
+  }, [matrix]);
 
   return (
     <MContainer>
