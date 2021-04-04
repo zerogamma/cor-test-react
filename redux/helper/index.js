@@ -13,7 +13,6 @@ export const checkSide = (matrix, x, y, direction, word) => {
           return false;
         return true;
       case "right":
-        debugger;
         if (matrix[y][x + 1] !== word[1] && matrix[y][x + 2] !== word[2])
           return false;
         return true;
