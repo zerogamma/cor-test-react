@@ -35,7 +35,6 @@ export const checkSide = (matrix, x, y, direction, word) => {
           return true;
         return false;
       case "left":
-        debugger;
         if (matrix[y][x - 1] === word[1] && matrix[y][x - 2] === word[2])
           return true;
         return false;
