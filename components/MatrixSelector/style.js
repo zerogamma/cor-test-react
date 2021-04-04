@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const MSContainer = styled.div`
-  margin-top: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid #dadce0;
+  padding-bottom: 15px;
 `;
 
 export const MSTitle = styled.div``;

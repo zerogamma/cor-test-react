@@ -8,7 +8,7 @@ const AssignmentContainer = () => {
   return (
     <ACMain>
       <AHButton
-        value="Enunciado hide/show"
+        value="Assignment hide/show"
         type="button"
         onClick={() => setvisibility(!visibility)}
       />

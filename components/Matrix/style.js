@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const MContainer = styled.div`
   width: 500px;
   heigth: 500px;
-  border-top: 1px solid;
-  margin-top: 10px;
-  padding-top: 30px;
+  padding: 25px 0;
 `;
 
 export const MMatrixContaner = styled.div`
