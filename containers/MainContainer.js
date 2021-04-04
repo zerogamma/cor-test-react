@@ -7,10 +7,13 @@ import { MCMain } from "./MainContainerStyle";
 
 const MainContainer = () => {
   return (
-    <MCMain>
-      <AssignementContainer />
-      <ResolutionContainer />
-    </MCMain>
+    <>
+      <Header />
+      <MCMain>
+        <AssignementContainer />
+        <ResolutionContainer />
+      </MCMain>
+    </>
   );
 };
 
