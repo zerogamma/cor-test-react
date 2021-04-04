@@ -19,7 +19,11 @@ const MatrixSelector = () => {
       <MSTitle>Select Alphabet Soup</MSTitle>
       <Dropdown value={selectedMatrix} onChange={changeValue}>
         {_.times(countMatrix, i => {
-          return <DropdownContent key={i}>SET {i}</DropdownContent>;
+          return (
+            <DropdownContent key={i} value={i}>
+              SET {i}
+            </DropdownContent>
+          );
         })}
       </Dropdown>
     </MSContainer>
