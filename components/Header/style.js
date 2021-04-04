@@ -11,5 +11,5 @@ export const HContainer = styled.div`
 
 export const HTitle = styled.div`
   font-size: 25px;
-  padding-left: 20px;
+  padding-left: 3%;
 `;

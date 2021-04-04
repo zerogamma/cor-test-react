@@ -4,5 +4,5 @@ export const MCMain = styled.div`
   display: flex;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
-  margin-left: 45px;
+  margin-left: 5%;
 `;
