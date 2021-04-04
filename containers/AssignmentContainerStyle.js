@@ -27,4 +27,5 @@ export const AHButton = styled.input`
   outline: none;
   color: darkgray;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 `;
