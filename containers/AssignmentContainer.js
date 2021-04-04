@@ -8,7 +8,7 @@ const AssignmentContainer = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setvisibility(false);
-    }, 5000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, [visibility]);
 
