@@ -5,3 +5,8 @@ export const RContainer = styled.div`
 `;
 
 export const RLabel = styled.div``;
+
+export const RResult = styled.span`
+  color: blue;
+  font-weight: 800;
+`;
