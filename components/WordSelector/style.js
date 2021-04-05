@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const WSContainer = styled.div``;
+export const WSContainer = styled.div`
+  margin: 10px 0 30px 0;
+`;
 
 export const WSLabel = styled.div`
   display: flex;

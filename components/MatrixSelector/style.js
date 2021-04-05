@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const MSContainer = styled.div`
-  margin: 10px 0;
   border-bottom: 1px solid #dadce0;
   padding-bottom: 15px;
 `;
 
-export const MSTitle = styled.div``;
+export const MSTitle = styled.div`
+  font-size: 12px;
+  font-style: italic;
+`;
 
 export const Dropdown = styled.select`
   min-width: 120px;
