@@ -18,19 +18,24 @@ const WordSelector = () => {
   const dispatch = useDispatch();
   const inputRef = useRef(null);
   const checkRef = useRef(null);
+  const [check, setCheck] = useState(false);
 
-  const newWord = element => {
+  const newWord = () => {
     setWord([...inputRef.current.value]);
   };
 
   const enableChange = element => {
-    console.log("working?");
+    setCheck(element.target.checked);
+    element.target.checked
+      ? (inputRef.current.disabled = false)
+      : (inputRef.current.disabled = true);
   };
 
   return (
     <WSContainer>
       <WSLabel>
-        Current Word to Find is <WSInput defaultValue={word} ref={inputRef} />
+        Current Word to Find is{" "}
+        <WSInput defaultValue={word} ref={inputRef} check={check} disabled />
         <WSConfirm type="button" value="Change" onClick={newWord} />
         <WSShowContainer>
           <WSToggle>
@@ -39,7 +44,7 @@ const WordSelector = () => {
               ref={checkRef}
               onClick={enableChange}
             />
-            <WSShowSpan className="indicator" />
+            <WSShowSpan check={check} />
           </WSToggle>
         </WSShowContainer>
       </WSLabel>

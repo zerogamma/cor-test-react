@@ -15,9 +15,6 @@ export const WSShowContainer = styled.label`
 
 export const WSShowButton = styled.input`
   display: none;
-  &:checked + & {
-    transform: translate3d(25%, 0, 0);
-  }
 `;
 
 export const WSShowSpan = styled.div`
@@ -28,6 +25,10 @@ export const WSShowSpan = styled.div`
   transform: translate3d(-75%, 0, 0);
   transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
   box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
+  ${props =>
+    props.check === true
+      ? "transform: translate3d(25%, 0, 0);"
+      : "   transform: translate3d(-75%, 0, 0);"}
 `;
 
 export const WSToggle = styled.div`
