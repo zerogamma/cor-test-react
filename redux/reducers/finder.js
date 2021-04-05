@@ -27,7 +27,10 @@ export default function(state = initialState, action) {
       };
     }
     case NEW_WORD: {
-      console.log(action.payload);
+      return {
+        ...state,
+        word: action.payload
+      };
     }
     default:
       return state;
@@ -40,11 +43,22 @@ const findWord = (matrix, word) => {
       if (column !== word[0]) return (result += 0);
       let countFind = 0;
       directions.forEach(direction => {
-        if (checkWord(matrix, x, y, direction, word)) countFind += 1;
+        if (changeTypeWordFinder(matrix, x, y, direction, word)) countFind += 1;
       });
       return (result += countFind);
     }, 0));
   }, 0);
 
   return countWordFind;
+};
+
+const changeTypeWordFinder = (matrix, x, y, direction, word) => {
+  const validationFunction = {
+    OIE: function(matrix, x, y, direction, word) {
+      return checkWord(matrix, x, y, direction, word);
+    }
+  };
+  return validationFunction[word]
+    ? validationFunction[word](matrix, x, y, word)
+    : checkRandomWord(matrix, x, y, direction, word);
 };

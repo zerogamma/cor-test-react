@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import _ from "lodash";
+import { new_word, find_word } from "../../redux/action";
 import {
   WSContainer,
   WSLabel,
@@ -14,6 +14,7 @@ import {
 
 const WordSelector = () => {
   const currentWord = useSelector(state => state.finder.word);
+  const currentMatrix = useSelector(state => state.matrix.selectedMatrix);
   const [word, setWord] = useState(currentWord.join(""));
   const dispatch = useDispatch();
   const inputRef = useRef(null);
@@ -22,7 +23,12 @@ const WordSelector = () => {
 
   const newWord = () => {
     setWord([...inputRef.current.value]);
+    dispatch(new_word([...inputRef.current.value]));
   };
+
+  useEffect(() => {
+    dispatch(find_word(currentMatrix));
+  }, [currentWord]);
 
   const enableChange = element => {
     setCheck(element.target.checked);
