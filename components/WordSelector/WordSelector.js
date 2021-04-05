@@ -36,7 +36,12 @@ const WordSelector = () => {
       <WSLabel>
         Current Word to Find is{" "}
         <WSInput defaultValue={word} ref={inputRef} check={check} disabled />
-        <WSConfirm type="button" value="Change" onClick={newWord} />
+        <WSConfirm
+          type="button"
+          value="Change"
+          onClick={newWord}
+          check={check}
+        />
         <WSShowContainer>
           <WSToggle>
             <WSShowButton

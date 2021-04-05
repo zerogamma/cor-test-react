@@ -14,6 +14,13 @@ export const WSInput = styled.input`
 
 export const WSConfirm = styled.input`
   margin-right: 8px;
+  color: darkgray;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  ${props => (props.check === false ? "display:none" : "")}
 `;
 
 export const WSShowContainer = styled.label`
