@@ -8,7 +8,8 @@ import {
   WSConfirm,
   WSShowContainer,
   WSShowButton,
-  WSShowSpan
+  WSShowSpan,
+  WSToggle
 } from "./style";
 
 const WordSelector = () => {
@@ -16,10 +17,14 @@ const WordSelector = () => {
   const [word, setWord] = useState(currentWord.join(""));
   const dispatch = useDispatch();
   const inputRef = useRef(null);
+  const checkRef = useRef(null);
 
   const newWord = element => {
     setWord([...inputRef.current.value]);
+  };
 
+  const enableChange = element => {
+    console.log("working?");
   };
 
   return (
@@ -27,6 +32,16 @@ const WordSelector = () => {
       <WSLabel>
         Current Word to Find is <WSInput defaultValue={word} ref={inputRef} />
         <WSConfirm type="button" value="Change" onClick={newWord} />
+        <WSShowContainer>
+          <WSToggle>
+            <WSShowButton
+              type="checkbox"
+              ref={checkRef}
+              onClick={enableChange}
+            />
+            <WSShowSpan className="indicator" />
+          </WSToggle>
+        </WSShowContainer>
       </WSLabel>
     </WSContainer>
   );
