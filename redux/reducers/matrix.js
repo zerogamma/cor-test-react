@@ -1,5 +1,5 @@
 import { FETCH_DATA, SELECT_MATRIX } from "../actionTypes";
-import { getResources } from "../../service";
+import { getResources, getResourcesUsingFetch } from "../../service";
 
 const initialState = {
   matrixs: [],
@@ -10,13 +10,16 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case FETCH_DATA: {
-      const fetched = getResources();
+      const fetched = getResourcesUsingFetch();
+      const fetchedMatrix = fetched.resources || getResources().resources;
+
+      debugger;
+
       return {
         ...state,
-        matrixs: fetched.resources,
-        countMatrix: fetched.resources.length,
-        selectedMatrix:
-          fetched.resources.lenght !== 0 ? fetched.resources[0] : []
+        matrixs: fetchedMatrix,
+        countMatrix: fetchedMatrix.length,
+        selectedMatrix: fetchedMatrix.length !== 0 ? fetchedMatrix[0] : []
       };
     }
     case SELECT_MATRIX: {
