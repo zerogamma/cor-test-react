@@ -58,7 +58,8 @@ const changeTypeWordFinder = (matrix, x, y, direction, word) => {
       return checkWord(matrix, x, y, direction, word);
     }
   };
-  return validationFunction[word]
-    ? validationFunction[word](matrix, x, y, word)
+  debugger;
+  return validationFunction[word.join("")]
+    ? validationFunction[word.join("")](matrix, x, y, direction, word)
     : checkRandomWord(matrix, x, y, direction, word);
 };
