@@ -2,15 +2,24 @@ import styled from "styled-components";
 
 export const WSContainer = styled.div``;
 
-export const WSLabel = styled.div``;
+export const WSLabel = styled.div`
+  display: flex;
+`;
 
-export const WSInput = styled.input``;
+export const WSInput = styled.input`
+  margin: 0 8px;
+  padding-left: 10px;
+  width: 75px;
+`;
 
-export const WSConfirm = styled.input``;
+export const WSConfirm = styled.input`
+  margin-right: 8px;
+`;
 
 export const WSShowContainer = styled.label`
   cursor: pointer;
   color: #394a56;
+  margin-left: auto;
 `;
 
 export const WSShowButton = styled.input`
@@ -33,7 +42,6 @@ export const WSShowSpan = styled.div`
 
 export const WSToggle = styled.div`
   isolation: isolate;
-  position: relative;
   height: 20px;
   width: 40px;
   border-radius: 15px;
