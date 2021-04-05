@@ -1,4 +1,4 @@
-import { FIND_WORD } from "../actionTypes";
+import { FIND_WORD, NEW_WORD } from "../actionTypes";
 import { checkWord, checkRandomWord } from "../helper";
 
 const initialState = {
@@ -25,6 +25,9 @@ export default function(state = initialState, action) {
         ...state,
         finded_word: result
       };
+    }
+    case NEW_WORD: {
+      console.log(action.payload);
     }
     default:
       return state;
