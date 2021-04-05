@@ -13,8 +13,6 @@ export default function(state = initialState, action) {
       const fetched = getResourcesUsingFetch();
       const fetchedMatrix = fetched.resources || getResources().resources;
 
-      debugger;
-
       return {
         ...state,
         matrixs: fetchedMatrix,
